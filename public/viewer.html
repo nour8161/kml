@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Visualiser plusieurs KML</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <style>
+    html, body, #map { height: 100%; margin: 0; padding: 0; width: 100vw; }
+    #map { height: 98vh; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
+  <script>
+    // Récupérer la liste des fichiers depuis l'URL (ex ?files=f1.kml,f2.kml)
+    const urlParams = new URLSearchParams(window.location.search);
+    const files = (urlParams.get('files') || '').split(',').filter(x => x);
+
+    var map = L.map('map').setView([36, 3], 6);
+
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 19,
+      attribution: 'Tiles © Esri'
+    }).addTo(map);
+
+    if (files.length === 0) {
+      alert('Aucun fichier KML à afficher.');
+    } else {
+      let bounds;
+      files.forEach(function(filename, idx){
+        const kmlUrl = `/kml/${filename}`;
+        omnivore.kml(kmlUrl)
+          .on('ready', function() {
+            if (this.getLayers().length > 0) {
+              if (!bounds) {
+                bounds = this.getBounds();
+              } else {
+                bounds.extend(this.getBounds());
+              }
+            }
+            this.eachLayer(function(layer) {
+              // Style plus fin, sans remplissage
+              if (layer.setStyle) {
+                layer.setStyle({
+                  color: 'red',        // contour rouge
+                  weight: 1.2,         // trait fin
+                  opacity: 1,
+                  fillColor: 'transparent', // pas de remplissage
+                  fillOpacity: 0
+                });
+              }
+              // Popup avec nom et description si existant
+              if (layer.feature && layer.feature.properties && (layer.feature.properties.name || layer.feature.properties.description)) {
+                let popupContent = '';
+                if (layer.feature.properties.name) popupContent += '<b>' + layer.feature.properties.name + '</b>';
+                if (layer.feature.properties.description) popupContent += '<br>' + layer.feature.properties.description;
+                layer.bindPopup(popupContent);
+              }
+            });
+            if (idx === files.length -1 && bounds) {
+              map.fitBounds(bounds, {padding: [20, 20]});
+            }
+          })
+          .on('error', function() {
+            alert('Erreur lors du chargement du KML : ' + filename);
+          })
+          .addTo(map);
+      });
+    }
+  </script>
+</body>
+</html>
