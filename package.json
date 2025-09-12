@@ -1,0 +1,26 @@
+{
+  "name": "partage-kml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nour8161/kml.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nour8161/kml/issues"
+  },
+  "homepage": "https://github.com/nour8161/kml#readme",
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  }
+}
