@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Folder>
+	<name>Chaabet_El_Ameur_Sec_21</name>
+	<visibility>0</visibility>
+	<Placemark id="Chaabet_El_Ameur_section_21.1">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>1</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>40 59</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Commune</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69258447382194,36.6354625427603,0 3.69260908625637,36.6354616445425,0 3.6926213959335,36.6354615771363,0 3.69284582425676,36.6354618748675,0 3.69289134411743,36.635469259981,0 3.69321820259822,36.6354873185969,0 3.69324663018231,36.6354894531569,0 3.69318571889111,36.6352454834878,0 3.6931395518181,36.6351663378438,0 3.69311557653645,36.6351328775262,0 3.69307231913278,36.6350613504122,0 3.69279129871819,36.6350857934292,0 3.69279928679891,36.6351315565687,0 3.69274159516241,36.6351395070578,0 3.69269617873261,36.6351435730266,0 3.69256846513632,36.6351572510187,0 3.6923442509096,36.6351806184827,0 3.69224268574435,36.635153690202,0 3.69213103484367,36.635163462582,0 3.69194652126004,36.6351789775862,0 3.69196516887335,36.6354621149875,0 3.69217731504336,36.6354655349545,0 3.692388507436891,36.6354681963175,0 3.69258447382194,36.6354625427603,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.2">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>2</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>31 37</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Commune</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69357076120342,36.6346807110284,0 3.69354847980687,36.6346251014746,0 3.693297740857,36.6346470892809,0 3.69294764745152,36.6346772554295,0 3.69309133302688,36.6348596957884,0 3.69323980193908,36.6350474539091,0 3.69340563939685,36.6352709986595,0 3.69356088184787,36.6352648033133,0 3.6937349725543,36.6352485795348,0 3.69373874636136,36.6352470319403,0 3.693755707716611,36.6352377775361,0 3.693766939497209,36.6352232103979,0 3.69377152925823,36.6352071527998,0 3.69376931151323,36.6351712828881,0 3.69375056244939,36.6350874063946,0 3.69371385693573,36.6350074456578,0 3.69363845590243,36.6348368467362,0 3.69360846150497,36.6347660105216,0 3.69357076120342,36.6346807110284,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.3">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>3</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>25 00</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Commune</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.6942280504476,36.6347984930634,0 3.69422589872938,36.6345603089539,0 3.69403844297673,36.6345643916017,0 3.69365619746308,36.6345993169515,0 3.69367746311775,36.6346472975844,0 3.69369390474797,36.6346853798273,0 3.69383986235932,36.6350143889148,0 3.69390348082888,36.6351384819801,0 3.69392831373895,36.6351620126195,0 3.69396252595123,36.635175566976,0 3.69399573615312,36.6351830192444,0 3.694031752568271,36.6351866388365,0 3.69406865383761,36.6351833825378,0 3.69408756411411,36.6351802249674,0 3.69411580542519,36.6351617471762,0 3.69413925016962,36.6351364247131,0 3.694157912176811,36.6351057843355,0 3.69417338872756,36.6350369890532,0 3.69418075696307,36.6350140451327,0 3.69418348729862,36.6350018149923,0 3.69420084374264,36.6349314824607,0 3.6942280504476,36.6347984930634,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.4">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>4</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>46 83</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Commune</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69380525615202,36.6339083418156,0 3.69360548460619,36.6337017795358,0 3.69336447912994,36.6337527251524,0 3.69312444776037,36.6338067187018,0 3.69321881866238,36.633981031256,0 3.69345719849424,36.6341637156344,0 3.69353919219714,36.6343304612762,0 3.69355279303875,36.6343685591189,0 3.69357309099644,36.6344142547379,0 3.69363783454871,36.634558191451,0 3.69367662929578,36.6345549248584,0 3.69373814930068,36.6345515336338,0 3.69387632561318,36.6345431411523,0 3.69420563482993,36.6345184305301,0 3.69399540831932,36.6340981606943,0 3.69387668553459,36.6339537568805,0 3.69380525615202,36.6339083418156,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.5">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>5</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>52 60</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Commune</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69310724532775,36.6339992020386,0 3.69302521160667,36.6338278756191,0 3.69299686040462,36.6338341385362,0 3.69285511104959,36.6338662164954,0 3.69272848411047,36.6338951576449,0 3.69227583057138,36.6339976476318,0 3.692553408785221,36.6342221089569,0 3.69261549278747,36.6342813179969,0 3.69291507470317,36.6346354442183,0 3.693135506488709,36.6346128598624,0 3.6935291769333,36.6345847445588,0 3.69344015526483,36.6343737574171,0 3.69330577332781,36.6341729436997,0 3.69317807184024,36.6340827932542,0 3.69313025273693,36.63403037736,0 3.69310724532775,36.6339992020386,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.6">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>6</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>14 67</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Commune</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.6929443999478,36.6348421781014,0 3.69289752054227,36.6347889935266,0 3.69286725452505,36.6347929765937,0 3.69283894128212,36.6346984640448,0 3.69274215634735,36.6345714982557,0 3.69257671275329,36.6346014153135,0 3.69238573750687,36.6346352891383,0 3.69242935407025,36.6348518697707,0 3.69262228556096,36.6348248561873,0 3.692739569066851,36.6348097083698,0 3.69278333817654,36.6350430838949,0 3.69304731438804,36.6350187342915,0 3.692970220681239,36.6348702842466,0 3.6929443999478,36.6348421781014,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.7">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>7</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>31 94</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Commune</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69218588117958,36.6342088517247,0 3.69215861699447,36.6340204290795,0 3.69192991898683,36.6340713044545,0 3.6918250214862,36.6340947816522,0 3.6918919027193,36.6342661918153,0 3.69195973115195,36.6344375967211,0 3.69198778380541,36.6346084557684,0 3.69196478015957,36.6347879920307,0 3.69196166804497,36.6349681829189,0 3.69195461022809,36.6351308360687,0 3.69225935157995,36.6351116093348,0 3.69224936471639,36.6349490494525,0 3.69226545497346,36.634948197946,0 3.69229095225592,36.6349404239272,0 3.69231262069027,36.6349280901444,0 3.69228663293242,36.6347763060981,0 3.692255587637161,36.6345886676683,0 3.69222358868582,36.6344002709637,0 3.69218588117958,36.6342088517247,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.8">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>8</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>05 31</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Commune</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69271343324493,36.6345365369289,0 3.69255374847538,36.6343648719914,0 3.69243272624435,36.6343853842215,0 3.6923372422745,36.6344027027597,0 3.69235299769918,36.6344697999766,0 3.69237866907323,36.634586467111,0 3.69271343324493,36.6345365369289,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.9">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>9</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>19 24</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Commune</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69182547268293,36.6335137947172,0 3.69166588951008,36.6334581721842,0 3.69162144833116,36.6334652861969,0 3.6915780639518,36.633484609606,0 3.69166179680528,36.6337399071319,0 3.69173134620111,36.6338922165938,0 3.69180758590089,36.6340513604468,0 3.69216193004332,36.6339677329894,0 3.692092455361839,36.6338238213294,0 3.69209327849735,36.6338100747415,0 3.69209115095859,36.6337841291401,0 3.692089119713689,36.6337688712747,0 3.69208331470104,36.6337551609514,0 3.69207753031601,36.6337437408888,0 3.69207080595757,36.6337330893843,0 3.69206404718682,36.6337186208308,0 3.69205636906885,36.6337072111279,0 3.69204869782766,36.6336965648025,0 3.69204195281376,36.6336836230671,0 3.69203052843525,36.6336768145423,0 3.691919756129309,36.6335735914731,0 3.69182547268293,36.6335137947172,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.10">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>10</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>01 06 88</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Commune</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69278254634955,36.6331695852868,0 3.69251376384384,36.6330802067365,0 3.692508178943509,36.6330909255769,0 3.69228884039738,36.6330241792954,0 3.69227216817161,36.6330654967665,0 3.69217007634028,36.6329797857331,0 3.692010719120201,36.6328440002721,0 3.6919488550248,36.6327038641294,0 3.69137706727009,36.6328253250485,0 3.69133831448508,36.6328331713449,0 3.69132697957103,36.6328362870795,0 3.69137527747091,36.632942142522,0 3.691404370296381,36.6330183283945,0 3.69144523768496,36.6331402568448,0 3.69146168475828,36.6331791028302,0 3.691482914308311,36.6332232668034,0 3.691512596984929,36.6332597500894,0 3.69155745711762,36.6332992042172,0 3.6916021524085,36.6333203364267,0 3.69169244868124,36.6333580151579,0 3.69173521595361,36.6333753406221,0 3.69185594283886,36.633427358352,0 3.69192066008105,36.6334636499117,0 3.69206057909373,36.6335438100367,0 3.69211691900454,36.6335961797478,0 3.692212117375901,36.633757509954,0 3.69225324088613,36.6339076843172,0 3.69226593542884,36.633950367957,0 3.69253526602678,36.6338901081105,0 3.69277721247167,36.6338383955667,0 3.69302009859118,36.6337859139367,0 3.69299947444583,36.6335989820248,0 3.69298151892516,36.6333929492345,0 3.69296119405834,36.6333441998935,0 3.69293519487675,36.6332962450506,0 3.69290165519564,36.6332521487464,0 3.69286151502307,36.6332111424099,0 3.69283573618697,36.633187616717,0 3.69278254634955,36.6331695852868,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.11">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>11</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>36 34</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Commune</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69190190769629,36.6321170287152,0 3.69188197560129,36.6321117935705,0 3.69168571661626,36.6321892117645,0 3.6916253307478,36.6322132088372,0 3.69147242756071,36.6322682495883,0 3.69128001697378,36.6323525171085,0 3.69123970716617,36.6323977808439,0 3.69119665972126,36.6324545112689,0 3.691187527534891,36.6324919701593,0 3.691194457683669,36.6325255240515,0 3.69124391494307,36.6326550401578,0 3.69131442312322,36.632808871524,0 3.69135031466169,36.6327987505616,0 3.69151089008951,36.6327543562922,0 3.69152788556136,36.6327489192539,0 3.69163274011574,36.6327208618393,0 3.69194559514836,36.6326573115677,0 3.69196629729852,36.632327388418,0 3.6919672304231,36.6323258563867,0 3.69196806727739,36.632313636648,0 3.69197079100117,36.6323006431084,0 3.69197249224186,36.6322792572387,0 3.69197239601003,36.6322685694675,0 3.69197129108341,36.6322510161861,0 3.691970247981041,36.6322403336263,0 3.69196825804719,36.632229656214,0 3.69196433313071,36.632214408701,0 3.69196234319868,36.6322037313204,0 3.69195939952289,36.6321922956774,0 3.69195642148049,36.6321770429845,0 3.69195345718625,36.6321633171114,0 3.69194766606968,36.6321511336281,0 3.69194092121148,36.632138191882,0 3.69192946961833,36.6321283296712,0 3.69191616548824,36.6321230583096,0 3.69190190769629,36.6321170287152,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.12">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>12</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>01 04 02</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Commune</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69315954956808,36.631819269146,0 3.6930901783033,36.6316868091948,0 3.69289378397675,36.6317489610994,0 3.69269560573012,36.6318233376753,0 3.69250970869281,36.6318945928328,0 3.69231910451931,36.6319689273179,0 3.69209238198307,36.6320281901021,0 3.69209262449926,36.6321602654283,0 3.69207293350928,36.632602410082,0 3.69206661486094,36.6326367998535,0 3.692066931098021,36.6326719167722,0 3.69207292164267,36.6327062391984,0 3.69208463458709,36.6327451110006,0 3.692104855613921,36.6327824093554,0 3.69213073034898,36.6328166229817,0 3.69217368993865,36.6328553237999,0 3.69222417631166,36.6328886392804,0 3.69227746898188,36.6329181221433,0 3.692454136296,36.6329782310267,0 3.69270295161906,36.6330585576971,0 3.692849223440629,36.6331081441499,0 3.692903428924,36.6331338044926,0 3.69293196576878,36.6331481536929,0 3.69343085838745,36.6330286118542,0 3.69312833632561,36.6328729996111,0 3.69293224963324,36.6327595566993,0 3.69291987155521,36.6327519900357,0 3.69290843347335,36.632743654742,0 3.69289793538827,36.6327345508822,0 3.692887416656931,36.6327231567604,0 3.69287783788321,36.6327109940412,0 3.69286920598932,36.6326988261662,0 3.69286825222989,36.6326980679114,0 3.69285767156528,36.632679803099,0 3.69284897773599,36.6326607645027,0 3.69284122390454,36.6326409573092,0 3.69282763749379,36.6326043861869,0 3.69281688479942,36.632567036094,0 3.69280802582518,36.6325296756274,0 3.69280294051308,36.6324907675956,0 3.69280353640807,36.6324518284461,0 3.69280791283379,36.63241210511,0 3.69281913751102,36.6323967746787,0 3.69287596677054,36.6322933977857,0 3.69287871098875,36.6322826944563,0 3.692898312816999,36.6322512856985,0 3.69292349252825,36.6322083946041,0 3.69306003320428,36.6320190746661,0 3.6931496987894,36.6318819259565,0 3.693158967622789,36.631859735151,0 3.69315954956808,36.631819269146,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.13">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>13</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>30 60</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Commune</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69353278628043,36.6330959999291,0 3.69349934968453,36.6330633549703,0 3.692981512697,36.6331822374421,0 3.692993994110561,36.6332012552749,0 3.69300740172135,36.6332179776895,0 3.6930208231065,36.6332362269219,0 3.69304577216835,36.633272735758,0 3.69305635984505,36.6332917639602,0 3.6930660006825,36.6333107973496,0 3.69307182648823,36.6333267978535,0 3.693074811682771,36.6333428139224,0 3.69307590310919,36.6333588403366,0 3.69308073388122,36.6333695021607,0 3.6931079518169,36.6335525806952,0 3.6931372565017,36.6337570243701,0 3.69356160454216,36.6336661380823,0 3.69359751688082,36.6336583066397,0 3.6936051498887,36.6335597799184,0 3.69360774246472,36.6335322815336,0 3.69361450443514,36.6334421575073,0 3.69362364239915,36.6334054618578,0 3.69359708473905,36.6332956708946,0 3.69359509451222,36.6332849935142,0 3.693585246892741,36.6332430578497,0 3.69357163242323,36.6332034331827,0 3.69354347739241,36.6331264792633,0 3.69353278628043,36.6330959999291,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.14">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>14</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>09 84</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Etat</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69415825058897,36.6337804358321,0 3.69419864902854,36.6337450954524,0 3.69422426295229,36.6337502990162,0 3.69428601678342,36.6337728634664,0 3.69432876412072,36.6337878977619,0 3.69435726008162,36.6337976661258,0 3.694408612113881,36.6338218145476,0 3.69442264280989,36.6338026512941,0 3.69446659410156,36.6337413340457,0 3.69436675831856,36.633696075333,0 3.69421977202026,36.6336724518881,0 3.69402727381106,36.6336422070277,0 3.69375482899787,36.633671949367,0 3.69376064808221,36.6336871864249,0 3.69376836779844,36.633703176504,0 3.69377221730021,36.6337100264133,0 3.69377993016875,36.6337252530819,0 3.69378858299805,36.6337397111464,0 3.69379626137319,36.6337511207666,0 3.693804907316081,36.6337648153884,0 3.69381830830798,36.6337807742979,0 3.69383359619256,36.633795959407,0 3.6938766536363,36.6338453473543,0 3.69392621521231,36.6338809575164,0 3.69400606313012,36.6339148745723,0 3.69415825058897,36.6337804358321,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.15">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>15</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>07 21</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Etat</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.6941629116811,36.6339819607027,0 3.69420780805399,36.6340252308242,0 3.69415791308077,36.6340575695414,0 3.6941531993821,36.6340598857552,0 3.69419842680883,36.6341397995921,0 3.69420486875096,36.6341191511252,0 3.6942142203327,36.6341061211902,0 3.69438524372665,36.633855534599,0 3.694408612113881,36.6338218145476,0 3.69435726008162,36.6337976661258,0 3.69432876412072,36.6337878977619,0 3.69428601678342,36.6337728634664,0 3.69422426295229,36.6337502990162,0 3.69419864902854,36.6337450954524,0 3.69415825058897,36.6337804358321,0 3.69400606313012,36.6339148745723,0 3.69411018986885,36.6340158417786,0 3.6941629116811,36.6339819607027,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.16">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>16</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>00 38</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>S.O.N.E.L.G.A.Z</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69420780805399,36.6340252308242,0 3.6941629116811,36.6339819607027,0 3.69411018986885,36.6340158417786,0 3.69415126422253,36.6340553156933,0 3.6941531993821,36.6340598857552,0 3.69415791308077,36.6340575695414,0 3.69420780805399,36.6340252308242,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.17">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>17</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>94 15</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Etat</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69442264280989,36.6338026512941,0 3.694408612113881,36.6338218145476,0 3.69438524372665,36.633855534599,0 3.6942142203327,36.6341061211902,0 3.69420486875096,36.6341191511252,0 3.69419842680883,36.6341397995921,0 3.69439762991412,36.6345975385617,0 3.69437012005619,36.6346969379275,0 3.69423448427842,36.6351962143838,0 3.69433601567654,36.6352193239123,0 3.69437939341821,36.6351992360922,0 3.69442619134151,36.6352432591246,0 3.69452795220081,36.635186968576,0 3.69472731736985,36.6352431321381,0 3.695225959496669,36.6348853882521,0 3.69521243370884,36.6348556881453,0 3.69482960374955,36.6339882243352,0 3.694780055498041,36.6339541413732,0 3.69446659410156,36.6337413340457,0 3.69442264280989,36.6338026512941,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.18">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>18</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>20 85</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Etat</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69542345133068,36.6349438513254,0 3.69543057738974,36.6348941879825,0 3.69540474885505,36.6348653189711,0 3.69538948121459,36.6348524243306,0 3.69536015526617,36.6348556393821,0 3.695328949404019,36.6348603916574,0 3.69531003231264,36.6348627860148,0 3.69525902464738,36.634876808546,0 3.695225959496669,36.6348853882521,0 3.69472731736985,36.6352431321381,0 3.69473970288658,36.6352514620458,0 3.695302730522819,36.6354163262436,0 3.69531105227332,36.6353941404922,0 3.695338637097159,36.6353031384621,0 3.69534673777821,36.6352565235557,0 3.69537068694224,36.6351823373744,0 3.695389058368411,36.6351196335977,0 3.69540727774391,36.6350401347555,0 3.6954181430396,36.6349851067217,0 3.69542345133068,36.6349438513254,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.19">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>19</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>28 50</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Kadri Mohamed</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69593080554829,36.6353395801282,0 3.69594094483681,36.6353089863818,0 3.69596296510126,36.6352309934663,0 3.695991392335281,36.6351285349135,0 3.69601173303215,36.6350742181206,0 3.69602818936149,36.6350092344473,0 3.69603084334528,36.6349886067057,0 3.69604027073975,36.63498397413,0 3.69602127070996,36.6349772076928,0 3.69594719204476,36.6349531850623,0 3.69589117344027,36.6349366974984,0 3.69585985693786,36.6349292353692,0 3.69583421490833,36.634920978559,0 3.69578486606382,36.634909034924,0 3.69572226766333,36.6348979276142,0 3.69567390721819,36.634890559209,0 3.69563026735604,36.6348816378897,0 3.69558093238696,36.6348712210194,0 3.69552977966899,36.6348692120444,0 3.6955042343824,36.6348716428894,0 3.695483444294689,36.6348763379171,0 3.69543057738974,36.6348941879825,0 3.69542345133068,36.6349438513254,0 3.6954181430396,36.6349851067217,0 3.69540727774391,36.6350401347555,0 3.695389058368411,36.6351196335977,0 3.69537068694224,36.6351823373744,0 3.69534673777821,36.6352565235557,0 3.695338637097159,36.6353031384621,0 3.69531105227332,36.6353941404922,0 3.695302730522819,36.6354163262436,0 3.69532170987758,36.6354208025675,0 3.69545081240573,36.635455974688,0 3.69559505850425,36.6354902999188,0 3.69565863879324,36.635505219125,0 3.69585200620095,36.6355262951663,0 3.69588268694263,36.6354635235794,0 3.69590389866344,36.6354008040652,0 3.69593080554829,36.6353395801282,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.20">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>20</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>06 08</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Etat</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69601173303215,36.6350742181206,0 3.695991392335281,36.6351285349135,0 3.69625500180572,36.635168309898,0 3.6964208394453,36.635181902106,0 3.69642624406979,36.6351513344278,0 3.696430694866081,36.6351200085241,0 3.69643719859323,36.6351062306249,0 3.69644071635426,36.6350764367536,0 3.696429187612559,36.6350581774935,0 3.69641586888023,36.6350513798276,0 3.69629062331611,36.6350238219803,0 3.696210994587831,36.6350143356337,0 3.696187246222729,36.6350060684416,0 3.69618535245397,36.6350060788683,0 3.69617396901509,36.6350038512018,0 3.69614264554385,36.6349956257387,0 3.69613408894927,36.6349918556113,0 3.69609806562163,36.634987473214,0 3.69604027073975,36.63498397413,0 3.69603084334528,36.6349886067057,0 3.69602818936149,36.6350092344473,0 3.69601173303215,36.6350742181206,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.21">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>21</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>05 31</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Etat</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.695991392335281,36.6351285349135,0 3.69596296510126,36.6352309934663,0 3.69606822930762,36.6352479733624,0 3.69608815557036,36.6352524443517,0 3.69645988440101,36.6353107098378,0 3.69644641939486,36.6351832881081,0 3.6964208394453,36.635181902106,0 3.69625500180572,36.635168309898,0 3.695991392335281,36.6351285349135,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.22">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>22</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>05 56</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Etat</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69594094483681,36.6353089863818,0 3.69593080554829,36.6353395801282,0 3.69601714583254,36.6353581911124,0 3.69618494678134,36.6353794073409,0 3.696260822911051,36.6353927316326,0 3.69642955014985,36.6354116520744,0 3.69645988440101,36.6353107098378,0 3.69608815557036,36.6352524443517,0 3.69606822930762,36.6352479733624,0 3.69596296510126,36.6352309934663,0 3.69594094483681,36.6353089863818,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.23">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>23</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>10 52</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Etat</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69588268694263,36.6354635235794,0 3.69585200620095,36.6355262951663,0 3.69591840651933,36.6355389083739,0 3.69598292690473,36.6355530587856,0 3.69606451909442,36.6355701689737,0 3.69612526579649,36.6355858669753,0 3.6961841394087,36.6356038655994,0 3.69632842759972,36.6356427703879,0 3.69640446131723,36.635464468192,0 3.69642955014985,36.6354116520744,0 3.696260822911051,36.6353927316326,0 3.69618494678134,36.6353794073409,0 3.69601714583254,36.6353581911124,0 3.69593080554829,36.6353395801282,0 3.69590389866344,36.6354008040652,0 3.69588268694263,36.6354635235794,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.24">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>24</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>29 27</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Etat</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69672824174235,36.6352473920586,0 3.69671023694412,36.6352459643767,0 3.696676162609359,36.6352476790231,0 3.69664404437177,36.6352562539366,0 3.69661761437165,36.6352655609178,0 3.69658843368191,36.6352848078893,0 3.69658094849969,36.6352947739686,0 3.6965697310826,36.635310868184,0 3.69649172104381,36.6354800199788,0 3.69647223062906,36.6355236438766,0 3.69645009318341,36.6355886589282,0 3.69641668285419,36.6356636608742,0 3.69658279838292,36.6357077892906,0 3.69660176403976,36.6357107385912,0 3.69667097764733,36.6357202820587,0 3.696736376012979,36.6357267927539,0 3.696788517766231,36.6357333764383,0 3.696866343510889,36.635752797172,0 3.69691285235496,36.6357647560077,0 3.69697637079765,36.6357728038267,0 3.69703997234729,36.635790012484,0 3.6970379816163,36.6357793352029,0 3.69711207152154,36.6355956991551,0 3.69715003555215,36.6355008222254,0 3.69718337584074,36.635418185993,0 3.69721579685587,36.6353386085756,0 3.69713990677407,36.6353237580757,0 3.69710478859725,36.6353147903436,0 3.69707250418671,36.6353050434991,0 3.69704500271426,36.6353006144376,0 3.69694541960108,36.635283604091,0 3.69687523175504,36.6352710123306,0 3.69684583653039,36.6352665936606,0 3.6968173743322,36.6352606429474,0 3.696786085300479,36.6352562346996,0 3.69675669700752,36.6352525793844,0 3.69672824174235,36.6352473920586,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.25">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>25</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>19 60</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Biens Non Revendiqués Lors Des Opérations Cadastrales</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69717675175814,36.6348967873438,0 3.69717671712948,36.6348929702681,0 3.69652715121026,36.6348965502834,0 3.69652529999727,36.6350057336232,0 3.69654557911656,36.635049138452,0 3.69654207523595,36.6350804591438,0 3.69654786037945,36.635091878979,0 3.69656615576726,36.6351253699211,0 3.69657383472931,36.6351367793536,0 3.69660425983711,36.6351503538125,0 3.69661946545487,36.6351563776144,0 3.69663559721969,36.6351601059707,0 3.69686417212328,36.6352000725943,0 3.69719227489669,36.6352509417307,0 3.69719003090987,36.6350035968848,0 3.69718716752859,36.6348967299095,0 3.69717675175814,36.6348967873438,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.26">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>26</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>04 02</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Etat</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69717671712948,36.6348929702681,0 3.69717675175814,36.6348967873438,0 3.69718716752859,36.6348967299095,0 3.69718858341416,36.6348440441659,0 3.697126897152951,36.6348291153302,0 3.69667709061926,36.6348277773445,0 3.69666655720611,36.6348148567515,0 3.69664200732149,36.6348226264848,0 3.69660994461615,36.634837308659,0 3.69658449625553,36.6348504274912,0 3.69657414276746,36.6348573555527,0 3.696550615837371,36.6348735175805,0 3.69653745627223,36.6348842783638,0 3.69652715121026,36.6348965502834,0 3.69717671712948,36.6348929702681,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.27">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>27</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>31 50</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Delci Aissa</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69719003090987,36.6350035968848,0 3.69719246882301,36.6352723172386,0 3.69729496192454,36.6352969457987,0 3.69735948927457,36.6353118588736,0 3.69745529877487,36.6353304165843,0 3.697488544008221,36.6353416849178,0 3.69753785180476,36.6353490473568,0 3.69759571631492,36.6353601798286,0 3.69760427995002,36.6353647132583,0 3.69770863246145,36.6353855139666,0 3.69769945459604,36.6354176294477,0 3.697886159337529,36.6354349217193,0 3.69792384105581,36.6354133371622,0 3.69793709462644,36.6353086715846,0 3.6979290410544,36.6352560381144,0 3.69791653040398,36.635233967187,0 3.69789437056214,36.6351920998409,0 3.69787618546963,36.6351708236795,0 3.69783519875464,36.635141275427,0 3.69780379880699,36.6351246529083,0 3.69776862519435,36.6351095780705,0 3.69773916067075,36.6350975255023,0 3.69771158295589,36.6350846990673,0 3.69769163589421,36.6350779381238,0 3.6976609819224,36.635039171426,0 3.69767577175985,36.6349993905083,0 3.697692587073671,36.6349741039027,0 3.69770005128867,36.6349618475288,0 3.69771034230959,36.6349480486925,0 3.697720640297089,36.6349350132319,0 3.697573364079231,36.6347755017674,0 3.69735042511026,36.634834753677,0 3.69735332812303,36.6348416087197,0 3.69725696715956,36.6348665705041,0 3.69725121656134,36.6348589677477,0 3.69718858341416,36.6348440441659,0 3.69718716752859,36.6348967299095,0 3.69719003090987,36.6350035968848,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.28">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>28</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>27 00</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Etat</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.6970379816163,36.6357793352029,0 3.69703997234729,36.635790012484,0 3.69724788372108,36.6358484150612,0 3.69734001712458,36.6358792083136,0 3.69733069357357,36.6358952921212,0 3.69733450197588,36.6358975614883,0 3.69733357584351,36.6358998569369,0 3.69736109832817,36.6359065761547,0 3.69741613638354,36.6359192511944,0 3.69750797198036,36.6359172176819,0 3.69758191344282,36.6359259710878,0 3.69759707774703,36.6359274143101,0 3.69760935279502,36.6359235293451,0 3.69761588409777,36.635912805051,0 3.69763066718744,36.6358722607023,0 3.69765001152767,36.6358126050114,0 3.69766747591379,36.6357544865847,0 3.69768204409043,36.6356902765311,0 3.69768908558761,36.6356314521709,0 3.69769137873791,36.635571127088,0 3.69769458414099,36.6355069797677,0 3.69768870869548,36.6354856356473,0 3.69767257681384,36.6354819074032,0 3.69762417420922,36.6354699593447,0 3.69758144610587,36.6354572164786,0 3.69758423135579,36.6354510935358,0 3.69757282702371,36.6354465757465,0 3.6975510276387,36.6354444056817,0 3.69752059532339,36.6354300680913,0 3.69752246138483,36.6354270039769,0 3.69746925508434,36.6354074478566,0 3.69744635641728,36.6353884879735,0 3.69740742979844,36.6353772509993,0 3.69721579685587,36.6353386085756,0 3.69718337584074,36.635418185993,0 3.69715003555215,36.6355008222254,0 3.69711207152154,36.6355956991551,0 3.6970379816163,36.6357793352029,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.29">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>29</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>26 87</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Etat</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69821305306196,36.6356652050296,0 3.69818789631343,36.6355019660577,0 3.69815569491886,36.6355013804435,0 3.69813747504375,36.6354762872499,0 3.69808341873592,36.6354674243867,0 3.69800959553939,36.6354716492328,0 3.69793868235676,36.6354834924687,0 3.69788567003405,36.6354853120082,0 3.69782322339116,36.6354910008324,0 3.69779299896511,36.6354995655703,0 3.69774394058159,36.6355196860118,0 3.69773171412345,36.6355289148503,0 3.69772429140825,36.6355457516774,0 3.697708224582299,36.6356534865415,0 3.69769548780073,36.6357108154387,0 3.69768745087251,36.635764301164,0 3.69767461013583,36.6358101789295,0 3.69766731217536,36.6358407571384,0 3.69763758658965,36.6359042873507,0 3.69762641088987,36.635924962114,0 3.69762272029402,36.6359356707656,0 3.69769959263635,36.6359543327662,0 3.69795943202578,36.6359956516217,0 3.69801439396186,36.6359999288896,0 3.69810253216322,36.6360078401405,0 3.69815477824702,36.6360258743823,0 3.698185072195181,36.6360249436361,0 3.69820400330639,36.6360240756377,0 3.69825607600867,36.6360230245914,0 3.69828258930536,36.6360228781487,0 3.6982701546918,36.6360092047568,0 3.698258320167069,36.6359573556469,0 3.69824640935749,36.6358971090421,0 3.69823369041955,36.6358521358344,0 3.6982207217539,36.6357796798878,0 3.69821766603253,36.6357560298817,0 3.69822712117045,36.6357544507678,0 3.69821305306196,36.6356652050296,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.30">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>30</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>28 26</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Biens Non Revendiqués Lors Des Opérations Cadastrales</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69870202438406,36.6358075586424,0 3.69868096550419,36.6354702309459,0 3.69844433172584,36.6354814633761,0 3.69822850883793,36.6354902900276,0 3.69818789631343,36.6355019660577,0 3.69821305306196,36.6356652050296,0 3.69822712117045,36.6357544507678,0 3.69821766603253,36.6357560298817,0 3.6982207217539,36.6357796798878,0 3.69823369041955,36.6358521358344,0 3.69824640935749,36.6358971090421,0 3.698258320167069,36.6359573556469,0 3.6982701546918,36.6360092047568,0 3.69828258930536,36.6360228781487,0 3.69831223463264,36.6360547792272,0 3.69837108832061,36.6360704865344,0 3.69867078863304,36.6361215084655,0 3.6987182031975,36.6361288808751,0 3.69870202438406,36.6358075586424,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.31">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>31</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>24 82</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Lasni Amar</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69868096550419,36.6354702309459,0 3.69870202438406,36.6358075586424,0 3.6987182031975,36.6361288808751,0 3.69874197299559,36.6361394377797,0 3.69888232999326,36.6361623287757,0 3.69888139696116,36.6361638608274,0 3.69903312388361,36.6361874522326,0 3.699034036040549,36.636183629955,0 3.699047306583449,36.6361850834643,0 3.69904634581606,36.6361835618838,0 3.69909565428832,36.6361909237014,0 3.699073000455639,36.636094854506,0 3.69906498772859,36.6360468015783,0 3.69906093620986,36.6360178129761,0 3.699059760123911,36.6359926256742,0 3.69906245499573,36.6359765783902,0 3.699063249130659,36.6359597781387,0 3.69906018619932,36.6359353647177,0 3.69905054355787,36.6359163318409,0 3.69904384583001,36.6359087344112,0 3.69903612480175,36.6358927446938,0 3.69903612725585,36.6357889157314,0 3.699019581123,36.6356355541406,0 3.69901915059253,36.6355882227574,0 3.69902041246659,36.6355187419949,0 3.69902363759767,36.6354568848434,0 3.69902596442467,36.635400376818,0 3.69870168613883,36.6354579012447,0 3.69868096550419,36.6354702309459,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.32">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>32</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>53 06</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Laidani Et Consorts Rabah</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.699073000455639,36.636094854506,0 3.69909565428832,36.6361909237014,0 3.6991203640891,36.636200711853,0 3.69977446256965,36.6359657677921,0 3.69978759409289,36.6359519530229,0 3.69974320094092,36.6359644139589,0 3.69974093869466,36.6359239637434,0 3.69974075796255,36.6359041150977,0 3.6997386556367,36.6358812232708,0 3.69973708311616,36.6358125216761,0 3.69973496689206,36.6357881030322,0 3.699734035440669,36.6356858061361,0 3.69973200958621,36.6356713118626,0 3.69973194007517,36.6356636777482,0 3.699730499637989,36.6356094809079,0 3.699728383422869,36.6355850622948,0 3.699727278212249,36.6354636801562,0 3.69972901906868,36.635446874659,0 3.6997285255482,36.6353926725749,0 3.69972651360495,36.6353797050853,0 3.699725344266779,36.6353552812296,0 3.69971677356012,36.6353499845454,0 3.69902596442467,36.635400376818,0 3.69902363759767,36.6354568848434,0 3.69902041246659,36.6355187419949,0 3.69901915059253,36.6355882227574,0 3.699019581123,36.6356355541406,0 3.69903612725585,36.6357889157314,0 3.69903612480175,36.6358927446938,0 3.69904384583001,36.6359087344112,0 3.69905054355787,36.6359163318409,0 3.69906018619932,36.6359353647177,0 3.699063249130659,36.6359597781387,0 3.69906245499573,36.6359765783902,0 3.699059760123911,36.6359926256742,0 3.69906093620986,36.6360178129761,0 3.69906498772859,36.6360468015783,0 3.699073000455639,36.636094854506,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.33">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>33</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>37 51</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Ziane Et Consorts Slimane</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.69965392717242,36.6346876593948,0 3.699449434529571,36.6346926083008,0 3.69931987090905,36.6347108844402,0 3.69919027944312,36.6347261068055,0 3.6991233282771,36.6347570150017,0 3.69911990188511,36.6347967332843,0 3.69911762588913,36.6350670065373,0 3.69912559690681,36.6351104789874,0 3.69911803327799,36.6352158766713,0 3.69912518237658,36.6352730957404,0 3.69914167542997,36.6353165210881,0 3.69921086118979,36.6353230094474,0 3.69968417604357,36.6353058849749,0 3.69972095893799,36.6352896489544,0 3.69971846358796,36.6350155848884,0 3.69971727340745,36.634988870806,0 3.699715136364199,36.634962161933,0 3.699714566404309,36.6348995623525,0 3.69971543680878,36.6348911595874,0 3.699716272498919,36.6348789397803,0 3.6997170734355,36.6348629029632,0 3.69971586240627,36.6348338986232,0 3.69971475563874,36.6348163454404,0 3.699714581871281,36.6347972601993,0 3.69971161609614,36.634783534541,0 3.69971156049094,36.634777427274,0 3.69971046766612,36.6347614009076,0 3.69971134502037,36.6347537615507,0 3.699713162363779,36.6347453535756,0 3.69971403971789,36.6347377142506,0 3.69971677611818,36.6347262473688,0 3.69971763265884,36.6347163177865,0 3.69971657454807,36.6347041084939,0 3.69971458347858,36.6346934312275,0 3.69965392717242,36.6346876593948,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.34">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>34</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>02 14 12</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Etat</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.697126897152951,36.6348291153302,0 3.69718858341416,36.6348440441659,0 3.69725121656134,36.6348589677477,0 3.69725696715956,36.6348665705041,0 3.69735332812303,36.6348416087197,0 3.69735042511026,36.634834753677,0 3.697573364079231,36.6347755017674,0 3.697720640297089,36.6349350132319,0 3.69778568032953,36.6350064184162,0 3.69788524537758,36.6351257302379,0 3.69810929378162,36.6353970442705,0 3.69907739779112,36.6353290917166,0 3.69911390164973,36.6341371471525,0 3.69871861858865,36.6339874063069,0 3.698423966209659,36.633969948281,0 3.698132154545319,36.6339524738389,0 3.69662444431029,36.6347654646285,0 3.69665793140113,36.6348034525412,0 3.69666655720611,36.6348148567515,0 3.69667709061926,36.6348277773445,0 3.697126897152951,36.6348291153302,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="Chaabet_El_Ameur_section_21.35">
+		<visibility>0</visibility>
+		<description><![CDATA[<b>Commune de Chaabet El Ameur</b>
+<h3 style='color: #336699;'>Informations Parcelle</h3><table border='0' cellpadding='3' cellspacing='0' width='100%'>
+        <tr bgcolor='#EFEFEF'><td><b>N° Section:</b></td><td>021</td></tr>
+        <tr><td><b>N° Parcelle:</b></td><td>35</td></tr>
+        <tr bgcolor='#EFEFEF'><td><b>Superficie:</b></td><td>44 92</td></tr>
+        <tr><td><b>Propriétaire:</b></td><td>Biens Non Revendiqués Lors Des Opérations Cadastrales</td></tr></table>]]></description>
+		<Style>
+			<LineStyle>
+				<color>ff0000ff</color>
+			</LineStyle>
+			<PolyStyle>
+				<fill>0</fill>
+			</PolyStyle>
+		</Style>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						3.699449434529571,36.6346926083008,0 3.69965392717242,36.6346876593948,0 3.69971458347858,36.6346934312275,0 3.69971360182576,36.634689619427,0 3.69971254375523,36.6346774101022,0 3.69971231438418,36.6346522175936,0 3.69971406217914,36.6346361755028,0 3.69971297626746,36.6346209125446,0 3.69971377720263,36.634604875695,0 3.69971354783179,36.634579683186,0 3.699714369618429,36.6345659365615,0 3.6997160965594,36.6345476042453,0 3.699715950595821,36.634531572637,0 3.69971484383372,36.6345140194533,0 3.69971568647149,36.6345025630539,0 3.69971934191911,36.6344880373286,0 3.69972108974891,36.6344719952372,0 3.699723819188709,36.6344597649464,0 3.69972556697759,36.634443722855,0 3.69972832421895,36.6344345462296,0 3.69973010676012,36.6344223211802,0 3.6997328709507,36.6344139079313,0 3.69973464657969,36.634400919505,0 3.69973922806232,36.6343840982803,0 3.69974657373023,36.634358863806,0 3.69975304204752,36.6343412686889,0 3.69976047111984,36.6343251951785,0 3.69976973141835,36.6343022404444,0 3.69977154175502,36.6342930690597,0 3.69977432679012,36.634286946035,0 3.69977614407708,36.6342785380587,0 3.69978358704095,36.6342639913318,0 3.69978636512312,36.6342571049302,0 3.69979288208241,36.6342448536699,0 3.6997956462604,36.6342364404512,0 3.69980214236232,36.634221898965,0 3.69980860366507,36.6342035404364,0 3.69981605356735,36.6341897571159,0 3.69982073238227,36.6341836236375,0 3.69983659297257,36.634157578569,0 3.69984501756588,36.6341468436698,0 3.69984782344557,36.6341430108687,0 3.69985812787782,36.634130738667,0 3.69987025657108,36.634110821863,0 3.69987587527749,36.6341039196998,0 3.699887098743761,36.6340885885876,0 3.699891791451511,36.6340839819232,0 3.69992420913308,36.6340044038184,0 3.69970668604895,36.6339300266656,0 3.69970200727967,36.6339361601714,0 3.69968605633516,36.6339522808808,0 3.6996522119951,36.6339791888839,0 3.69964284749121,36.6339906924507,0 3.69962779472726,36.6340014640206,0 3.699588234329609,36.6340245864388,0 3.69956557878068,36.634032346289,0 3.69953534817338,36.6340401480863,0 3.69952496722699,36.6340440227674,0 3.69951366031226,36.6340501929124,0 3.69947776231668,36.6340595529505,0 3.69946549456839,36.6340642015137,0 3.69942871219736,36.6340804374531,0 3.69937964819636,36.6340997951185,0 3.69935417971434,36.6341106242791,0 3.6993324501294,36.6341160886533,0 3.69930500453159,36.6341177673777,0 3.69929176212486,36.634119367527,0 3.69926620332465,36.6341202723581,0 3.69920178778848,36.6341175748746,0 3.699180002628169,36.6341169319209,0 3.69914306738332,36.6341163727529,0 3.6991233282771,36.6347570150017,0 3.69919027944312,36.6347261068055,0 3.69931987090905,36.6347108844402,0 3.699449434529571,36.6346926083008,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.6.10201"></atom:link>
+</Folder>
+</kml>
