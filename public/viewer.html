@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visualiseur KML</title>
+  <title>Visualiseur KML avec Google Maps</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <style>
+    /* CSS Inchangé */
     html, body {
       margin: 0; padding: 0; height: 100%; width: 100%;
       font-family: Arial, sans-serif; overflow: hidden;
@@ -14,121 +15,87 @@
       position: relative;
       display: flex; height: 100%; width: 100%; 
     }
-    
     #sidebar {
-      width: 250px;
-      background: #f4f4f4; border-right: 1px solid #ccc;
+      width: 250px; background: #f4f4f4; border-right: 1px solid #ccc;
       display: flex; flex-direction: column;
-      transition: margin-left 0.3s ease-in-out;
-      z-index: 1000;
+      transition: margin-left 0.3s ease-in-out; z-index: 1000;
     }
-    #sidebar.hidden {
-      margin-left: -250px;
-    }
-
+    #sidebar.hidden { margin-left: -250px; }
     #title-section { padding: 10px; border-bottom: 1px solid #ccc; }
     #title-section h3 { margin: 0; font-size: 18px; }
     #title-section a { color: #007bff; text-decoration: none; font-size: 14px; }
     #title-section a:hover { text-decoration: underline; }
-
     #kml-list-container { flex-grow: 1; overflow-y: auto; }
-    
     table { width: 100%; border-collapse: collapse; }
     thead th { position: sticky; top: 0; background: #f4f4f4; z-index: 10; }
     th, td { padding: 6px 8px; border: 1px solid #ccc; font-size: 14px; text-align: left; }
     td label, td input { cursor: pointer; }
-
-    /* === MODIFICATION : Position verticale du bouton changée === */
     #sidebar-toggle {
-      position: absolute;
-      top: 90px; /* Déplacé de 10px à 90px pour éviter les contrôles de zoom */
-      left: 10px;
-      z-index: 1001;
-      background-color: #007bff;
-      color: white;
-      border: 1px solid #0056b3;
-      border-radius: 5px;
-      width: 35px;
-      height: 35px;
-      font-size: 20px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: absolute; top: 90px; left: 10px; z-index: 1001;
+      background-color: #007bff; color: white; border: 1px solid #0056b3;
+      border-radius: 5px; width: 35px; height: 35px; font-size: 20px;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
       transition: left 0.3s ease-in-out, top 0.3s ease-in-out;
     }
-    #sidebar:not(.hidden) + #sidebar-toggle {
-      left: 260px;
-    }
-
-    #map { flex-grow: 1; min-width: 0; z-index: 1; }
-
+    #sidebar:not(.hidden) + #sidebar-toggle { left: 260px; }
+    #map { flex-grow: 1; min-width: 0; z-index: 1; background-color: #f0f0f0; }
     @media (max-width: 768px) {
       #sidebar {
         position: absolute; bottom: 0; left: 0; width: 100%; height: 50%;
-        margin-left: 0;
-        border-top: 1px solid #ccc; border-right: none;
-        transform: translateY(100%);
-        transition: transform 0.3s ease-in-out;
+        margin-left: 0; border-top: 1px solid #ccc; border-right: none;
+        transform: translateY(100%); transition: transform 0.3s ease-in-out;
       }
-      #sidebar.hidden {
-        transform: translateY(100%);
-      }
-      #sidebar:not(.hidden) {
-        transform: translateY(0);
-      }
-
-      /* Le bouton reste en haut à gauche, mais déplacé vers le bas aussi sur mobile */
-      #sidebar-toggle, #sidebar:not(.hidden) + #sidebar-toggle {
-        left: 10px;
-        top: 90px;
-      }
+      #sidebar.hidden { transform: translateY(100%); }
+      #sidebar:not(.hidden) { transform: translateY(0); }
+      #sidebar-toggle, #sidebar:not(.hidden) + #sidebar-toggle { left: 10px; top: 90px; }
     }
   </style>
 </head>
 <body>
 
 <div id="app-container">
-  
   <div id="sidebar" class="hidden">
-    <div id="title-section">
-      <h3>Fichiers KML</h3>
-      <a href="/">Retour à l'accueil</a>
-    </div>
+    <div id="title-section"><h3>Fichiers KML</h3><a href="/">Retour à l'accueil</a></div>
     <div id="kml-list-container">
       <table>
-        <thead>
-          <tr>
-            <th style="width: 40px;"></th>
-            <th>Nom du Fichier</th>
-          </tr>
-        </thead>
+        <thead><tr><th style="width: 40px;"></th><th>Nom du Fichier</th></tr></thead>
         <tbody id="kmlTableBody"></tbody>
       </table>
     </div>
   </div>
-
-  <button type="button" id="sidebar-toggle" title="Masquer/Afficher la barre latérale">
-    <span>&#9776;</span>
-  </button>
-  
+  <button type="button" id="sidebar-toggle" title="Masquer/Afficher la barre latérale"><span>&#9776;</span></button>
   <div id="map"></div>
 </div>
 
-
+<!-- Scripts -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
-<script>
-  const map = L.map('map').setView([36, 3], 6);
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    maxZoom: 19, attribution: 'Tiles © Esri'
-  }).addTo(map);
+<script src="https://unpkg.com/leaflet.gridlayer.googlemutant@0.4.0/Leaflet.GoogleMutant.js"></script>
+<!-- N'oubliez pas de mettre votre clé API sécurisée ici -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs4IgA9Qe_yqk7FTKPTW0HYwCTQf4dNlg"></script>
 
+<script>
+  const map = L.map('map', {
+    maxZoom: 22
+  }).setView([36, 3], 6);
+
+  map.createPane('kmlPane');
+  map.getPane('kmlPane').style.zIndex = 650;
+
+  // === MODIFICATION : Ajout de maxZoom à la couche Google Maps ===
+  L.gridLayer.googleMutant({
+      type: 'satellite',
+      maxZoom: 21 // Limite de zoom pour que la carte ne devienne pas blanche
+  }).addTo(map);
+  
   const kmlLayers = {}; let allBounds = null;
 
   function loadAndDisplayKML(filename) {
     if (kmlLayers[filename]) { map.removeLayer(kmlLayers[filename]); delete kmlLayers[filename]; }
-    const omniLayer = omnivore.kml(`/kml/${filename}`);
+
+    const customKmlLayer = L.geoJson(null, { pane: 'kmlPane' });
+    const omniLayer = omnivore.kml(`/kml/${filename}`, null, customKmlLayer);
+    
     omniLayer.on('ready', function() {
       this.eachLayer(function(layer) {
         if (layer.setStyle) layer.setStyle({ color: '#FF0000', weight: 1.5, opacity: 0.8, fillColor: 'transparent', fillOpacity: 0 });
@@ -182,23 +149,14 @@
   
   sidebarToggle.addEventListener('click', () => {
     sidebar.classList.toggle('hidden');
-    setTimeout(() => {
-      map.invalidateSize();
-    }, 300);
+    setTimeout(() => { map.invalidateSize(); }, 300);
   });
   
-  // Par défaut, la sidebar est cachée
   document.addEventListener('DOMContentLoaded', () => {
-    // La sidebar est déjà cachée par défaut via la classe 'hidden' dans le HTML
-    // On met à jour la carte une fois que tout est chargé
-    setTimeout(() => {
-      map.invalidateSize();
-    }, 100);
+    setTimeout(() => { map.invalidateSize(); }, 100);
   });
 
-  window.addEventListener('resize', () => {
-      map.invalidateSize();
-  });
+  window.addEventListener('resize', () => { map.invalidateSize(); });
 
 </script>
 

@@ -38,7 +38,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-// === PAGE D'ACCUEIL / UPLOAD (RESTAURÉE) ===
+// Page d'accueil pour l'upload et la liste des fichiers
 app.get('/', (req, res) => {
   let files = [];
   if (fs.existsSync('./uploads')) {
@@ -81,14 +81,12 @@ app.get('/', (req, res) => {
   `);
 });
 
-// === GESTION DE L'UPLOAD (RESTAURÉ) ===
+// Gestion de l'upload, qui redirige vers la page d'accueil
 app.post('/upload', upload.array('kmlfiles', 30), (req, res) => {
-    // Redirige simplement vers la page d'accueil qui affichera la nouvelle liste
     res.redirect('/');
 });
 
-
-// === ROUTES POUR LE VISUALISEUR (INCHANGÉES) ===
+// Route JSON pour la liste des fichiers KML
 app.get('/liste-kml', auth, (req, res) => {
   const dir = path.join(__dirname, 'uploads');
   fs.readdir(dir, (err, files) => {
@@ -101,6 +99,7 @@ app.get('/liste-kml', auth, (req, res) => {
   });
 });
 
+// Route pour servir les fichiers KML individuels
 app.get('/kml/:filename', auth, (req, res) => {
   const file = path.join(__dirname, 'uploads', req.params.filename);
   if (fs.existsSync(file)) {
@@ -111,10 +110,12 @@ app.get('/kml/:filename', auth, (req, res) => {
   }
 });
 
+// Route pour servir la page du visualiseur
 app.get('/viewer', auth, (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'viewer.html'));
 });
 
+// Route pour les fichiers statiques (comme viewer.html)
 app.use(express.static('public'));
 
 app.listen(PORT, () => {
