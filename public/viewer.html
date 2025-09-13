@@ -2,145 +2,204 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8"/>
-  <title>Visualiser plusieurs KML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualiseur KML</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      font-family: Arial, sans-serif;
+      margin: 0; padding: 0; height: 100%; width: 100%;
+      font-family: Arial, sans-serif; overflow: hidden;
     }
-    #map {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 300px;
+    #app-container { 
+      position: relative;
+      display: flex; height: 100%; width: 100%; 
     }
+    
     #sidebar {
+      width: 250px;
+      background: #f4f4f4; border-right: 1px solid #ccc;
+      display: flex; flex-direction: column;
+      transition: margin-left 0.3s ease-in-out;
+      z-index: 1000;
+    }
+    #sidebar.hidden {
+      margin-left: -250px;
+    }
+
+    #title-section { padding: 10px; border-bottom: 1px solid #ccc; }
+    #title-section h3 { margin: 0; font-size: 18px; }
+    #title-section a { color: #007bff; text-decoration: none; font-size: 14px; }
+    #title-section a:hover { text-decoration: underline; }
+
+    #kml-list-container { flex-grow: 1; overflow-y: auto; }
+    
+    table { width: 100%; border-collapse: collapse; }
+    thead th { position: sticky; top: 0; background: #f4f4f4; z-index: 10; }
+    th, td { padding: 6px 8px; border: 1px solid #ccc; font-size: 14px; text-align: left; }
+    td label, td input { cursor: pointer; }
+
+    /* === MODIFICATION : Position verticale du bouton changée === */
+    #sidebar-toggle {
       position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 300px;
-      background: #f4f4f4;
-      border-right: 1px solid #ccc;
-      padding: 10px;
-      overflow-y: auto;
+      top: 90px; /* Déplacé de 10px à 90px pour éviter les contrôles de zoom */
+      left: 10px;
+      z-index: 1001;
+      background-color: #007bff;
+      color: white;
+      border: 1px solid #0056b3;
+      border-radius: 5px;
+      width: 35px;
+      height: 35px;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: left 0.3s ease-in-out, top 0.3s ease-in-out;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
+    #sidebar:not(.hidden) + #sidebar-toggle {
+      left: 260px;
     }
-    th, td {
-      padding: 6px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
-    button {
-      margin-top: 10px;
-      padding: 8px 16px;
-      font-size: 14px;
+
+    #map { flex-grow: 1; min-width: 0; z-index: 1; }
+
+    @media (max-width: 768px) {
+      #sidebar {
+        position: absolute; bottom: 0; left: 0; width: 100%; height: 50%;
+        margin-left: 0;
+        border-top: 1px solid #ccc; border-right: none;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      #sidebar.hidden {
+        transform: translateY(100%);
+      }
+      #sidebar:not(.hidden) {
+        transform: translateY(0);
+      }
+
+      /* Le bouton reste en haut à gauche, mais déplacé vers le bas aussi sur mobile */
+      #sidebar-toggle, #sidebar:not(.hidden) + #sidebar-toggle {
+        left: 10px;
+        top: 90px;
+      }
     }
   </style>
 </head>
 <body>
 
-<div id="sidebar">
-  <h3>Fichiers KML</h3>
-  <form id="kmlForm">
-    <table>
-      <thead><tr><th>✔</th><th>Nom</th></tr></thead>
-      <tbody id="kmlTableBody"></tbody>
-    </table>
-    <button type="submit">Afficher</button>
-  </form>
+<div id="app-container">
+  
+  <div id="sidebar" class="hidden">
+    <div id="title-section">
+      <h3>Fichiers KML</h3>
+      <a href="/">Retour à l'accueil</a>
+    </div>
+    <div id="kml-list-container">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 40px;"></th>
+            <th>Nom du Fichier</th>
+          </tr>
+        </thead>
+        <tbody id="kmlTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <button type="button" id="sidebar-toggle" title="Masquer/Afficher la barre latérale">
+    <span>&#9776;</span>
+  </button>
+  
+  <div id="map"></div>
 </div>
 
-<div id="map"></div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
-
 <script>
   const map = L.map('map').setView([36, 3], 6);
-
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    maxZoom: 19,
-    attribution: 'Tiles © Esri'
+    maxZoom: 19, attribution: 'Tiles © Esri'
   }).addTo(map);
 
-  // Charger la liste des fichiers KML depuis le serveur
-  fetch('/liste-kml')
-    .then(res => res.json())
-    .then(files => {
-      const tbody = document.getElementById('kmlTableBody');
-      files.forEach(file => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td><input type="checkbox" name="kml" value="${file}"></td>
-          <td>${file}</td>
-        `;
-        tbody.appendChild(row);
+  const kmlLayers = {}; let allBounds = null;
+
+  function loadAndDisplayKML(filename) {
+    if (kmlLayers[filename]) { map.removeLayer(kmlLayers[filename]); delete kmlLayers[filename]; }
+    const omniLayer = omnivore.kml(`/kml/${filename}`);
+    omniLayer.on('ready', function() {
+      this.eachLayer(function(layer) {
+        if (layer.setStyle) layer.setStyle({ color: '#FF0000', weight: 1.5, opacity: 0.8, fillColor: 'transparent', fillOpacity: 0 });
+        if (layer.feature && layer.feature.properties) {
+          let popupContent = '';
+          if (layer.feature.properties.name) popupContent += `<b>${layer.feature.properties.name}</b>`;
+          if (layer.feature.properties.description) popupContent += `<br>${layer.feature.properties.description}`;
+          if (popupContent) layer.bindPopup(popupContent);
+        }
+      });
+      this.addTo(map);
+      kmlLayers[filename] = this;
+      updateMapBounds();
+    }).on('error', (err) => console.error('Erreur KML:', filename, err));
+  }
+
+  function removeKML(filename) {
+    if (kmlLayers[filename]) { map.removeLayer(kmlLayers[filename]); delete kmlLayers[filename]; updateMapBounds(); }
+  }
+
+  function updateMapBounds() {
+    allBounds = null; let hasLayers = false;
+    for (const filename in kmlLayers) {
+      if (kmlLayers[filename] && kmlLayers[filename].getLayers().length > 0) {
+        if (!allBounds) allBounds = kmlLayers[filename].getBounds();
+        else allBounds.extend(kmlLayers[filename].getBounds());
+        hasLayers = true;
+      }
+    }
+    if (hasLayers && allBounds.isValid()) map.fitBounds(allBounds, { padding: [50, 50] });
+    else if (!hasLayers) map.setView([36, 3], 6);
+  }
+
+  fetch('/liste-kml').then(res => res.json()).then(files => {
+    const tbody = document.getElementById('kmlTableBody');
+    files.forEach(file => {
+      const row = document.createElement('tr');
+      const checkboxId = `kml-${file.replace(/[^a-zA-Z0-9]/g, '-')}`;
+      row.innerHTML = `
+        <td><input type="checkbox" id="${checkboxId}" name="kml" value="${file}"></td>
+        <td><label for="${checkboxId}">${file}</label></td>`;
+      tbody.appendChild(row);
+      document.getElementById(checkboxId).addEventListener('change', function() {
+        if (this.checked) loadAndDisplayKML(this.value); else removeKML(this.value);
       });
     });
-
-  // Afficher les fichiers cochés sur la carte
-  document.getElementById('kmlForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const checked = Array.from(document.querySelectorAll('input[name="kml"]:checked'));
-    if (checked.length === 0) {
-      alert('Aucun fichier sélectionné.');
-      return;
-    }
-
-    let bounds;
-
-    checked.forEach((cb, idx) => {
-      const kmlUrl = `/kml/${cb.value}`;
-      omnivore.kml(kmlUrl)
-        .on('ready', function() {
-          if (this.getLayers().length > 0) {
-            if (!bounds) {
-              bounds = this.getBounds();
-            } else {
-              bounds.extend(this.getBounds());
-            }
-          }
-
-          this.eachLayer(function(layer) {
-            if (layer.setStyle) {
-              layer.setStyle({
-                color: 'red',
-                weight: 1.2,
-                opacity: 1,
-                fillColor: 'transparent',
-                fillOpacity: 0
-              });
-            }
-
-            if (layer.feature && layer.feature.properties) {
-              let popupContent = '';
-              if (layer.feature.properties.name) popupContent += '<b>' + layer.feature.properties.name + '</b>';
-              if (layer.feature.properties.description) popupContent += '<br>' + layer.feature.properties.description;
-              layer.bindPopup(popupContent);
-            }
-          });
-
-          this.addTo(map);
-
-          if (idx === checked.length - 1 && bounds) {
-            map.fitBounds(bounds, {padding: [20, 20]});
-          }
-        })
-        .on('error', function() {
-          alert('Erreur lors du chargement du KML : ' + cb.value);
-        });
-    });
   });
+
+  const sidebar = document.getElementById('sidebar');
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+  
+  sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('hidden');
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 300);
+  });
+  
+  // Par défaut, la sidebar est cachée
+  document.addEventListener('DOMContentLoaded', () => {
+    // La sidebar est déjà cachée par défaut via la classe 'hidden' dans le HTML
+    // On met à jour la carte une fois que tout est chargé
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 100);
+  });
+
+  window.addEventListener('resize', () => {
+      map.invalidateSize();
+  });
+
 </script>
 
 </body>

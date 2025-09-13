@@ -8,12 +8,11 @@ const compression = require('compression');
 const app = express();
 const PORT = 3000;
 
-// Compression des réponses
 app.use(compression());
 
-// Authentification simple
 const USERNAME = 'monami';
 const PASSWORD = 'motdepasse';
+
 function auth(req, res, next) {
   const user = basicAuth(req);
   if (!user || user.name !== USERNAME || user.pass !== PASSWORD) {
@@ -23,7 +22,6 @@ function auth(req, res, next) {
   next();
 }
 
-// Configuration de l'upload
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     const dir = './uploads';
@@ -40,46 +38,69 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-// Page d'accueil
+// === PAGE D'ACCUEIL / UPLOAD (RESTAURÉE) ===
 app.get('/', (req, res) => {
   let files = [];
   if (fs.existsSync('./uploads')) {
-    files = fs.readdirSync('./uploads').filter(f => f.endsWith('.kml'));
+    files = fs.readdirSync('./uploads').filter(f => f.endsWith('.kml')).sort();
   }
   res.send(`
-    <h2>Uploader des fichiers KML</h2>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-      <input type="file" name="kmlfiles" accept=".kml" multiple required />
-      <button type="submit">Envoyer</button>
-    </form>
-    <h3>Fichiers existants :</h3>
-    <ul>${files.map(f => `<li>${f}</li>`).join('')}</ul>
-    <a href="/viewer">Visualiser sur la carte</a>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestion des fichiers KML</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+            .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+            h2, h3 { color: #0056b3; }
+            form { margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #e9ecef; }
+            input[type="file"] { margin-bottom: 10px; }
+            button { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+            button:hover { background-color: #0056b3; }
+            ul { list-style-type: none; padding: 0; }
+            li { background-color: #f9f9f9; border: 1px solid #eee; margin-bottom: 5px; padding: 8px 12px; border-radius: 4px; }
+            a { color: #007bff; text-decoration: none; font-size: 18px; display: inline-block; margin-top: 15px;}
+            a:hover { text-decoration: underline; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Uploader des fichiers KML</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="kmlfiles" accept=".kml" multiple required />
+                <button type="submit">Envoyer</button>
+            </form>
+            <h3>Fichiers existants :</h3>
+            ${files.length > 0 ? `<ul>${files.map(f => `<li>${f}</li>`).join('')}</ul>` : '<p>Aucun fichier KML trouvé.</p>'}
+            <a href="/viewer">Visualiser sur la carte</a>
+        </div>
+    </body>
+    </html>
   `);
 });
 
-// Upload handler
+// === GESTION DE L'UPLOAD (RESTAURÉ) ===
 app.post('/upload', upload.array('kmlfiles', 30), (req, res) => {
-  const files = req.files.map(f => f.filename);
-  res.send(`
-    <h2>Fichiers uploadés !</h2>
-    <ul>${files.map(f => `<li>${f}</li>`).join('')}</ul>
-    <a href="/viewer">Visualiser sur la carte</a>
-    <br><br><a href="/">Retour</a>
-  `);
+    // Redirige simplement vers la page d'accueil qui affichera la nouvelle liste
+    res.redirect('/');
 });
 
-// Route JSON pour la liste des fichiers KML
+
+// === ROUTES POUR LE VISUALISEUR (INCHANGÉES) ===
 app.get('/liste-kml', auth, (req, res) => {
   const dir = path.join(__dirname, 'uploads');
   fs.readdir(dir, (err, files) => {
-    if (err) return res.status(500).json([]);
-    const kmlFiles = files.filter(f => f.endsWith('.kml'));
+    if (err) {
+      console.error("Erreur de lecture du répertoire 'uploads':", err);
+      return res.status(500).json([]);
+    }
+    const kmlFiles = files.filter(f => f.endsWith('.kml')).sort();
     res.json(kmlFiles);
   });
 });
 
-// Route pour servir les fichiers KML
 app.get('/kml/:filename', auth, (req, res) => {
   const file = path.join(__dirname, 'uploads', req.params.filename);
   if (fs.existsSync(file)) {
@@ -90,12 +111,10 @@ app.get('/kml/:filename', auth, (req, res) => {
   }
 });
 
-// Page viewer
 app.get('/viewer', auth, (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'viewer.html'));
 });
 
-// Fichiers statiques
 app.use(express.static('public'));
 
 app.listen(PORT, () => {
