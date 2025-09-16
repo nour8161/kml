@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visualiseur KML avec Google Maps</title>
+  <title>Visualiseur KML Avancé</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <style>
-    /* CSS Inchangé */
+    /* CSS Général */
     html, body {
       margin: 0; padding: 0; height: 100%; width: 100%;
       font-family: Arial, sans-serif; overflow: hidden;
@@ -15,21 +15,41 @@
       position: relative;
       display: flex; height: 100%; width: 100%; 
     }
+    
+    /* Barre latérale */
     #sidebar {
       width: 250px; background: #f4f4f4; border-right: 1px solid #ccc;
       display: flex; flex-direction: column;
       transition: margin-left 0.3s ease-in-out; z-index: 1000;
     }
     #sidebar.hidden { margin-left: -250px; }
-    #title-section { padding: 10px; border-bottom: 1px solid #ccc; }
+
+    #title-section { padding: 10px; border-bottom: 1px solid #ccc; flex-shrink: 0; }
     #title-section h3 { margin: 0; font-size: 18px; }
     #title-section a { color: #007bff; text-decoration: none; font-size: 14px; }
     #title-section a:hover { text-decoration: underline; }
-    #kml-list-container { flex-grow: 1; overflow-y: auto; }
-    table { width: 100%; border-collapse: collapse; }
-    thead th { position: sticky; top: 0; background: #f4f4f4; z-index: 10; }
-    th, td { padding: 6px 8px; border: 1px solid #ccc; font-size: 14px; text-align: left; }
-    td label, td input { cursor: pointer; }
+
+    #kml-list-container { flex-grow: 1; overflow-y: auto; padding: 10px; }
+    #kmlTree { list-style-type: none; padding: 0; margin: 0; }
+    .kml-file-item { margin-bottom: 2px; }
+    .kml-file-header { display: flex; align-items: center; padding: 4px; cursor: pointer; }
+    .kml-file-header:hover { background-color: #e0e0e0; }
+    .toggle-arrow {
+      width: 16px; height: 16px; flex-shrink: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='currentColor' d='M6 4l4 4-4 4z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: center;
+      transition: transform 0.2s ease-in-out;
+    }
+    .kml-file-item.expanded > .kml-file-header > .toggle-arrow { transform: rotate(90deg); }
+    .kml-file-header input[type="checkbox"] { margin: 0 5px; }
+    .placemarks-list { list-style-type: none; padding-left: 25px; display: none; }
+    .kml-file-item.expanded > .placemarks-list { display: block; }
+    .placemark-item {
+      padding: 4px 0 4px 16px; cursor: pointer;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .placemark-item:hover { background-color: #e9e9e9; }
+    
     #sidebar-toggle {
       position: absolute; top: 90px; left: 10px; z-index: 1001;
       background-color: #007bff; color: white; border: 1px solid #0056b3;
@@ -38,16 +58,37 @@
       transition: left 0.3s ease-in-out, top 0.3s ease-in-out;
     }
     #sidebar:not(.hidden) + #sidebar-toggle { left: 260px; }
-    #map { flex-grow: 1; min-width: 0; z-index: 1; background-color: #f0f0f0; }
+    
+    /* CORRECTION 2a : Fond de carte moins agressif */
+    #map { flex-grow: 1; min-width: 0; z-index: 1; background-color: #333; }
+    
+    /* CORRECTION 1 : Restauration du comportement mobile */
     @media (max-width: 768px) {
       #sidebar {
-        position: absolute; bottom: 0; left: 0; width: 100%; height: 50%;
-        margin-left: 0; border-top: 1px solid #ccc; border-right: none;
-        transform: translateY(100%); transition: transform 0.3s ease-in-out;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        margin-left: 0; /* Annule la marge du mode bureau */
+        border-top: 1px solid #ccc;
+        border-right: none;
+        transform: translateY(100%); /* Cachée en bas par défaut */
+        transition: transform 0.3s ease-in-out;
       }
-      #sidebar.hidden { transform: translateY(100%); }
-      #sidebar:not(.hidden) { transform: translateY(0); }
-      #sidebar-toggle, #sidebar:not(.hidden) + #sidebar-toggle { left: 10px; top: 90px; }
+      #sidebar.hidden {
+        transform: translateY(100%); /* Assure qu'elle est bien cachée */
+      }
+      /* Quand elle n'est PAS cachée, elle est visible */
+      #sidebar:not(.hidden) {
+        transform: translateY(0);
+      }
+      
+      /* Le bouton reste en haut à gauche sur mobile */
+      #sidebar-toggle, #sidebar:not(.hidden) + #sidebar-toggle {
+        left: 10px;
+        top: 10px; /* Remonté pour plus de visibilité */
+      }
     }
   </style>
 </head>
@@ -56,12 +97,7 @@
 <div id="app-container">
   <div id="sidebar" class="hidden">
     <div id="title-section"><h3>Fichiers KML</h3><a href="/">Retour à l'accueil</a></div>
-    <div id="kml-list-container">
-      <table>
-        <thead><tr><th style="width: 40px;"></th><th>Nom du Fichier</th></tr></thead>
-        <tbody id="kmlTableBody"></tbody>
-      </table>
-    </div>
+    <div id="kml-list-container"><ul id="kmlTree"></ul></div>
   </div>
   <button type="button" id="sidebar-toggle" title="Masquer/Afficher la barre latérale"><span>&#9776;</span></button>
   <div id="map"></div>
@@ -75,71 +111,96 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs4IgA9Qe_yqk7FTKPTW0HYwCTQf4dNlg"></script>
 
 <script>
-  const map = L.map('map', {
-    maxZoom: 22
-  }).setView([36, 3], 6);
+  const map = L.map('map', { maxZoom: 22 }).setView([36, 3], 6);
 
-  map.createPane('kmlPane');
-  map.getPane('kmlPane').style.zIndex = 650;
-
-  // === MODIFICATION : Ajout de maxZoom à la couche Google Maps ===
+  // CORRECTION 2b : Optimisation du chargement des tuiles
   L.gridLayer.googleMutant({
       type: 'satellite',
-      maxZoom: 21 // Limite de zoom pour que la carte ne devienne pas blanche
+      maxZoom: 21,
+      updateWhenIdle: true, // Ne charge les tuiles que lorsque la carte est immobile
   }).addTo(map);
   
-  const kmlLayers = {}; let allBounds = null;
+  const kmlLayers = {};
 
-  function loadAndDisplayKML(filename) {
-    if (kmlLayers[filename]) { map.removeLayer(kmlLayers[filename]); delete kmlLayers[filename]; }
-
-    const customKmlLayer = L.geoJson(null, { pane: 'kmlPane' });
-    const omniLayer = omnivore.kml(`/kml/${filename}`, null, customKmlLayer);
-    
+  function loadAndDisplayKml(filename, fileLi, placemarksUl, checkbox) {
+    if (kmlLayers[filename] && kmlLayers[filename].loaded) return;
+    const kmlUrl = `/kml/${filename}`;
+    const featureGroup = L.featureGroup();
+    kmlLayers[filename] = { mainLayer: featureGroup, features: {}, loaded: false };
+    placemarksUl.innerHTML = '<li>Chargement...</li>';
+    const omniLayer = omnivore.kml(kmlUrl);
     omniLayer.on('ready', function() {
+      placemarksUl.innerHTML = '';
+      let featureCount = 0;
       this.eachLayer(function(layer) {
+        featureCount++;
+        const featureName = layer.feature.properties.name || `Parcelle Sans Nom ${featureCount}`;
         if (layer.setStyle) layer.setStyle({ color: '#FF0000', weight: 1.5, opacity: 0.8, fillColor: 'transparent', fillOpacity: 0 });
-        if (layer.feature && layer.feature.properties) {
-          let popupContent = '';
-          if (layer.feature.properties.name) popupContent += `<b>${layer.feature.properties.name}</b>`;
-          if (layer.feature.properties.description) popupContent += `<br>${layer.feature.properties.description}`;
-          if (popupContent) layer.bindPopup(popupContent);
-        }
+        const popupContent = `<b>${featureName}</b><br>${layer.feature.properties.description || ''}`;
+        layer.bindPopup(popupContent);
+        featureGroup.addLayer(layer);
+        kmlLayers[filename].features[featureName] = layer;
+        const placemarkLi = document.createElement('li');
+        placemarkLi.className = 'placemark-item';
+        placemarkLi.textContent = featureName;
+        placemarksUl.appendChild(placemarkLi);
+        placemarkLi.addEventListener('click', () => {
+          if (checkbox.checked) {
+            layer.setStyle({ color: '#00FFFF', weight: 3 });
+            setTimeout(() => layer.setStyle({ color: '#FF0000', weight: 1.5 }), 30000);
+          }
+        });
       });
-      this.addTo(map);
-      kmlLayers[filename] = this;
-      updateMapBounds();
-    }).on('error', (err) => console.error('Erreur KML:', filename, err));
-  }
-
-  function removeKML(filename) {
-    if (kmlLayers[filename]) { map.removeLayer(kmlLayers[filename]); delete kmlLayers[filename]; updateMapBounds(); }
-  }
-
-  function updateMapBounds() {
-    allBounds = null; let hasLayers = false;
-    for (const filename in kmlLayers) {
-      if (kmlLayers[filename] && kmlLayers[filename].getLayers().length > 0) {
-        if (!allBounds) allBounds = kmlLayers[filename].getBounds();
-        else allBounds.extend(kmlLayers[filename].getBounds());
-        hasLayers = true;
+      kmlLayers[filename].loaded = true;
+      if (checkbox.checked) {
+        featureGroup.addTo(map);
+        map.fitBounds(featureGroup.getBounds(), { padding: [50, 50] });
       }
+    }).on('error', () => { placemarksUl.innerHTML = '<li>Erreur de chargement.</li>'; });
+  }
+
+  function toggleKmlVisibility(filename, isVisible) {
+    if (!kmlLayers[filename] || !kmlLayers[filename].loaded) return;
+    if (isVisible) {
+      kmlLayers[filename].mainLayer.addTo(map);
+      map.fitBounds(kmlLayers[filename].mainLayer.getBounds(), { padding: [50, 50] });
+    } else {
+      map.removeLayer(kmlLayers[filename].mainLayer);
     }
-    if (hasLayers && allBounds.isValid()) map.fitBounds(allBounds, { padding: [50, 50] });
-    else if (!hasLayers) map.setView([36, 3], 6);
   }
 
   fetch('/liste-kml').then(res => res.json()).then(files => {
-    const tbody = document.getElementById('kmlTableBody');
+    const kmlTree = document.getElementById('kmlTree');
     files.forEach(file => {
-      const row = document.createElement('tr');
-      const checkboxId = `kml-${file.replace(/[^a-zA-Z0-9]/g, '-')}`;
-      row.innerHTML = `
-        <td><input type="checkbox" id="${checkboxId}" name="kml" value="${file}"></td>
-        <td><label for="${checkboxId}">${file}</label></td>`;
-      tbody.appendChild(row);
-      document.getElementById(checkboxId).addEventListener('change', function() {
-        if (this.checked) loadAndDisplayKML(this.value); else removeKML(this.value);
+      const fileLi = document.createElement('li');
+      fileLi.className = 'kml-file-item';
+      const headerDiv = document.createElement('div');
+      headerDiv.className = 'kml-file-header';
+      headerDiv.innerHTML = `<span class="toggle-arrow"></span><input type="checkbox" value="${file}"><span class="file-name">${file}</span>`;
+      const placemarksUl = document.createElement('ul');
+      placemarksUl.className = 'placemarks-list';
+      fileLi.appendChild(headerDiv);
+      fileLi.appendChild(placemarksUl);
+      kmlTree.appendChild(fileLi);
+      const checkbox = headerDiv.querySelector('input[type="checkbox"]');
+      headerDiv.addEventListener('click', (e) => {
+        if (e.target.type !== 'checkbox') {
+          fileLi.classList.toggle('expanded');
+          if (fileLi.classList.contains('expanded') && !kmlLayers[file]) {
+            loadAndDisplayKml(file, fileLi, placemarksUl, checkbox);
+          }
+        }
+      });
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          if (kmlLayers[file] && kmlLayers[file].loaded) {
+            toggleKmlVisibility(file, true);
+          } else {
+            loadAndDisplayKml(file, fileLi, placemarksUl, checkbox);
+          }
+        } else {
+          toggleKmlVisibility(file, false);
+        }
       });
     });
   });
@@ -157,7 +218,6 @@
   });
 
   window.addEventListener('resize', () => { map.invalidateSize(); });
-
 </script>
 
 </body>
